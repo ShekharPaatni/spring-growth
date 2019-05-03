@@ -1,6 +1,7 @@
 package com.ttn.springdemo.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ttn.springdemo.annotation.Email;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -28,6 +29,8 @@ public class User extends BaseEntity {
     @Field("password")
     @JsonProperty("password")
     private String password;
+
+    @Email
     @Field("email")
     @NotNull(message = "{email.NotNull}")
     @JsonProperty("email")
