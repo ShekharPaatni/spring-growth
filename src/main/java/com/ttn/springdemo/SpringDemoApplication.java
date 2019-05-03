@@ -11,7 +11,16 @@ import org.springframework.data.mongodb.config.EnableMongoAuditing;
 @EnableMongoAuditing(auditorAwareRef = "auditorAware")
 public class SpringDemoApplication {
     public static void main(String[] args) {
-       SpringApplication.run(SpringDemoApplication.class, args);
+        /**
+         * SpringApplication to set banner mode off code
+         */
+//        SpringApplication springApplication = new SpringApplication(SpringDemoApplication.class);
+//        springApplication.setBannerMode(Banner.Mode.OFF);
+//        springApplication.run(args);
+        /**
+         * end of banner mode of spring application
+         */
+        SpringApplication.run(SpringDemoApplication.class, args);
     }
 
     @Bean
